@@ -12,18 +12,13 @@ module.exports =  {
   resolve: {
     modules: [path.resolve(__dirname, '/src'), 'node_modules/'],
     descriptionFiles: ['package.json'],
-    extensions : ['.js', '.ts', '.tsx']
+    extensions : ['.js']
   },
   module: {
     rules: [
       {
         use: 'babel-loader',
         test: /\.js$/,
-        exclude: /node_modules/
-      },
-      {
-        use: 'ts-loader',
-        test: /\.tsx?$/,
         exclude: /node_modules/
       },
       {
@@ -39,9 +34,7 @@ module.exports =  {
     new LiveReloadPlugin()
   ],
   externals: {
-    oimo: 'OIMO', //or true
-    cannon: 'CANNON', //or true
-    earcut: 'EARCUT'
+    oimo: 'OIMO',
   }
 };
 
@@ -64,13 +57,13 @@ if (process.env.NODE_ENV === 'production') {
     new CompressionWebpackPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
-      test: /\.(js|ts|vue|json|png|jpg|gif|svg)$/,
+      test: /\.(js|json|png|jpg|gif|svg)$/,
       threshold: 10240,
       minRatio: 0.8
     }),
 
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    
+
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })

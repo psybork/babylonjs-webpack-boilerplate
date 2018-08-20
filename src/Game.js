@@ -1,6 +1,5 @@
 import * as BABYLON from 'babylonjs';
 import 'babylonjs-loaders';
-import * as GUI from 'babylonjs-gui';
 
 export default class Game {
   constructor( canvasId ){
@@ -33,7 +32,7 @@ export default class Game {
   }
 
   doRender() {
-    
+
     // Run the render loop.
     this.engine.runRenderLoop(() => {
       this.scene.render();

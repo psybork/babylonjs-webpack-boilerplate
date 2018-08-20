@@ -1,14 +1,14 @@
 {
-  "name": "babylonjs-webpack-boilerplate",
+  "name": "babylonjs-webpack-es6-boilerplate",
   "version": "1.0.0",
-  "description": "This is a BabylonJS + Webpack boilerplate to work with typescript and/or es6",
+  "description": "A BabylonJS + Webpack (ES6) minimal boilerplate",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "dev": "webpack-dev-server --config ./webpack.config.js --open --mode development",
+    "start": "webpack-dev-server --config ./webpack.config.js --open --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Paul Orac",
+  "author": "David Morais",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -19,8 +19,6 @@
     "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.21.0",
-    "ts-loader": "^4.2.0",
-    "typescript": "^2.8.3",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15",
@@ -29,8 +27,6 @@
   },
   "dependencies": {
     "babylonjs": "^3.2.0-rc.2",
-    "babylonjs-gui": "^3.2.0-rc.3",
-    "babylonjs-loaders": "^3.2.0-rc.3",
-    "babylonjs-materials": "^3.2.0-rc.3"
+    "babylonjs-loaders": "^3.2.0-rc.3"
   }
 }
