@@ -17,6 +17,7 @@
     "compression-webpack-plugin": "^1.1.11",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
+    "eslint": "^5.4.0",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
@@ -26,7 +27,7 @@
     "webpack-livereload-plugin": "^2.1.1"
   },
   "dependencies": {
-    "babylonjs": "^3.2.0-rc.2",
-    "babylonjs-loaders": "^3.2.0-rc.3"
+    "babylonjs": "^3.2.0",
+    "babylonjs-loaders": "^3.2.0"
   }
 }
